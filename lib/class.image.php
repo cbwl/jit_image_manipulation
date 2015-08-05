@@ -54,6 +54,7 @@
 			$gateway->setopt(CURLOPT_RETURNTRANSFER, true);
 			$gateway->setopt(CURLOPT_FOLLOWLOCATION, true);
 			$gateway->setopt(CURLOPT_MAXREDIRS, Image::CURL_MAXREDIRS);
+			$gateway->setopt(CURLOPT_TIMEOUT, 0);
 			// get the raw body response, ignore errors
 			$response = @$gateway->exec();
 
